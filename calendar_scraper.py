@@ -1,7 +1,7 @@
 from selenium import webdriver
-# from bs4 import BeautifulSoup not yet
+from selenium.webdriver.common.action_chains import ActionChains
 
-CRIDENTIALS_FILE = "cridentials.txt"
+driver = webdriver.Chrome()
 
 class moodleConstants:
 
@@ -12,21 +12,14 @@ class moodleConstants:
     
     PROCEED_BUTTON_NAME = 'submit'
 
-def getCridentials():
+    CALENDAR_LINK_CLASS = 'gotocal'
+    CALENDAR_LINK_URL = 'https://enauczanie.pg.edu.pl/moodle/calendar/view.php?view=upcoming'
 
-    with open(CRIDENTIALS_FILE, "r") as f:
-        
-        cridentials = f.readlines()
-        nick = cridentials[0].strip()
-        password = cridentials[1].strip()
 
-        return nick, password
 
-driver = webdriver.Chrome()
+def getEventsPageSource(cridentials):
 
-def logIntoMoodle():
-
-    nick, password = getCridentials()
+    nick, password = cridentials[0], cridentials[1]
     driver.get(moodleConstants.LOGIN_PAGE_URL)
 
     username_field = driver.find_element_by_id(moodleConstants.NICK_FIELD_ID)
@@ -46,6 +39,15 @@ def logIntoMoodle():
 
     except NoSuchElementException:
         pass
+    
+    try:
+        cookie_close = driver.find_element_by_class_name("close-cookie-panel")
+        cookie_close.click()
+    
+    except NoSuchElementException:
+        pass
 
+    calendar_link = driver.find_element_by_xpath('//a[@href="'+moodleConstants.CALENDAR_LINK_URL+'"]')
+    calendar_link.click()
 
-logIntoMoodle()
+    return driver.page_source

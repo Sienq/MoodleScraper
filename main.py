@@ -1,4 +1,4 @@
-import calendar_scraper
+import calendar_source_downloader
 
 CRIDENTIALS_FILE = "cridentials.txt"
 
@@ -15,4 +15,4 @@ def getCridentials():
 if __name__ == "__main__":
 
     cridentials = getCridentials()
-    print(calendar_scraper.getEventsPageSource(cridentials))
+    print(calendar_source_downloader.getEventsPageSource(cridentials))

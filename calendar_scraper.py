@@ -1,7 +1,11 @@
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.chrome.options import Options
 
-driver = webdriver.Chrome()
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--window-size=1920,1080")
+driver = webdriver.Chrome(chrome_options=chrome_options)
 
 class moodleConstants:
 

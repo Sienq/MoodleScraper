@@ -1,0 +1,217 @@
+[INFO  - 2021-02-04T22:53:43.141Z] GhostDriver - Main - running on port 54421
+[INFO  - 2021-02-04T22:53:44.099Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2021-02-04T22:53:44.099Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.customHeaders:  - {}
+[INFO  - 2021-02-04T22:53:44.099Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2021-02-04T22:53:44.099Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d51a8af0-673b-11eb-b573-5b91a605dc1f
+[ERROR - 2021-02-04T22:53:44.777Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'a.endsWith(b)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:44.777Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - stack:
+  e (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  g (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  dispatch (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  handle (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  trigger (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  simulate (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  n (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  focus (:0)
+  trigger (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  trigger (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  (anonymous function) (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  each (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  each (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  trigger (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  (anonymous function) (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  (anonymous function) (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:3)
+  l (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  (anonymous function) (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.183Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'a.endsWith(b)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.183Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - stack:
+  e (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  g (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  dispatch (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  handle (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  sendEvent (:0)
+  _keyEvent (phantomjs://code/inputs.js:325)
+  _pressKey (phantomjs://code/inputs.js:280)
+  _sendKeys (phantomjs://code/inputs.js:237)
+  _postValueCommand (phantomjs://code/webelement_request_handler.js:288)
+  _handle (phantomjs://code/webelement_request_handler.js:72)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/session_request_handler.js:120)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/router_request_handler.js:78)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.184Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'a.endsWith(b)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.184Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - stack:
+  e (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  g (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  dispatch (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  handle (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  sendEvent (:0)
+  _keyEvent (phantomjs://code/inputs.js:325)
+  _pressKey (phantomjs://code/inputs.js:280)
+  _sendKeys (phantomjs://code/inputs.js:237)
+  _postValueCommand (phantomjs://code/webelement_request_handler.js:288)
+  _handle (phantomjs://code/webelement_request_handler.js:72)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/session_request_handler.js:120)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/router_request_handler.js:78)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.184Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'a.endsWith(b)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.184Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - stack:
+  e (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  g (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  dispatch (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  handle (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  sendEvent (:0)
+  _keyEvent (phantomjs://code/inputs.js:325)
+  _pressKey (phantomjs://code/inputs.js:280)
+  _sendKeys (phantomjs://code/inputs.js:237)
+  _postValueCommand (phantomjs://code/webelement_request_handler.js:288)
+  _handle (phantomjs://code/webelement_request_handler.js:72)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/session_request_handler.js:120)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/router_request_handler.js:78)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.185Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'a.endsWith(b)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.185Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - stack:
+  e (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  g (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  dispatch (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  handle (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  sendEvent (:0)
+  _keyEvent (phantomjs://code/inputs.js:325)
+  _pressKey (phantomjs://code/inputs.js:280)
+  _sendKeys (phantomjs://code/inputs.js:237)
+  _postValueCommand (phantomjs://code/webelement_request_handler.js:288)
+  _handle (phantomjs://code/webelement_request_handler.js:72)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/session_request_handler.js:120)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/router_request_handler.js:78)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.186Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'a.endsWith(b)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.186Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - stack:
+  e (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  g (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  dispatch (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  handle (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  sendEvent (:0)
+  _keyEvent (phantomjs://code/inputs.js:325)
+  _pressKey (phantomjs://code/inputs.js:280)
+  _sendKeys (phantomjs://code/inputs.js:237)
+  _postValueCommand (phantomjs://code/webelement_request_handler.js:288)
+  _handle (phantomjs://code/webelement_request_handler.js:72)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/session_request_handler.js:120)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/router_request_handler.js:78)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.186Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'a.endsWith(b)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.186Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - stack:
+  e (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  g (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  dispatch (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  handle (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  sendEvent (:0)
+  _keyEvent (phantomjs://code/inputs.js:325)
+  _pressKey (phantomjs://code/inputs.js:280)
+  _sendKeys (phantomjs://code/inputs.js:237)
+  _postValueCommand (phantomjs://code/webelement_request_handler.js:288)
+  _handle (phantomjs://code/webelement_request_handler.js:72)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/session_request_handler.js:120)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/router_request_handler.js:78)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.187Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'a.endsWith(b)')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:45.187Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - stack:
+  e (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  g (https://logowanie.pg.edu.pl/js/cas_old.min.js?20190212:1)
+  dispatch (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  handle (https://logowanie.pg.edu.pl/webjars/jquery/3.3.1/jquery.min.js:2)
+  sendEvent (:0)
+  _keyEvent (phantomjs://code/inputs.js:325)
+  _pressKey (phantomjs://code/inputs.js:280)
+  _sendKeys (phantomjs://code/inputs.js:237)
+  _postValueCommand (phantomjs://code/webelement_request_handler.js:288)
+  _handle (phantomjs://code/webelement_request_handler.js:72)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/session_request_handler.js:120)
+  _reroute (phantomjs://code/request_handler.js:61)
+  _handle (phantomjs://code/router_request_handler.js:78)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:47.192Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - msg: TypeError: null is not an object (evaluating 'f.body')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:47.192Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - stack:
+  sanitizeHtml (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:388)
+  _getConfig (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:376)
+  a (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:376)
+  (anonymous function) (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:377)
+  c (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:377)
+  (anonymous function) (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:377)
+  each (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/jquery/jquery-3.4.1.min.js:2)
+  each (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/jquery/jquery-3.4.1.min.js:2)
+  _jQueryInterface (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:377)
+  j (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:390)
+  (anonymous function) (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:390)
+  execCb (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+  check (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+  enable (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+  enable (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+  (anonymous function) (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+  (anonymous function) (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+  each (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+  enable (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+  init (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+  (anonymous function) (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:47.206Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - msg: TypeError: null is not an object (evaluating 'f.body')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2021-02-04T22:53:47.206Z] Session [d51a8af0-673b-11eb-b573-5b91a605dc1f] - page.onError - stack:
+  sanitizeHtml (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:388)
+  _getConfig (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:376)
+  a (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:376)
+  (anonymous function) (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:377)
+  c (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:377)
+  (anonymous function) (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:377)
+  each (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/jquery/jquery-3.4.1.min.js:2)
+  each (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/jquery/jquery-3.4.1.min.js:2)
+  _jQueryInterface (https://enauczanie.pg.edu.pl/moodle/lib/requirejs.php/1611260971/core/first.js:377)
+  (anonymous function) (https://enauczanie.pg.edu.pl/moodle/my/:2881)
+  execCb (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+  check (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+  enable (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+  init (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+  (anonymous function) (https://enauczanie.pg.edu.pl/moodle/lib/javascript.php/1611260971/lib/requirejs/require.min.js:5)
+
+  phantomjs://platform/console++.js:263 in error

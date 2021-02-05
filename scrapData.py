@@ -1,8 +1,8 @@
 from bs4 import BeautifulSoup
 import datetime
-import calendar_event
-import calendar_source_downloader
-import get_credentials
+import calendarEvent
+import calendarSourceDownloader
+import getCredentials
 
 def formatDate(mystr):
     
@@ -16,7 +16,7 @@ def formatDate(mystr):
 
 def scrap(cridentials):
 
-    text = calendar_source_downloader.getEventsPageSource(cridentials)
+    text = calendarSourceDownloader.getEventsPageSource(cridentials)
     html_soup = BeautifulSoup(text, 'html.parser')
     quiz_container = html_soup.findAll('div',attrs={"data-event-component" : ["mod_quiz","mod_assign"]})
     first = quiz_container[0]
@@ -25,11 +25,12 @@ def scrap(cridentials):
     events = []
 
     for element in quiz_container:
+
         name = element.div.h3.text
         dateSub = element.div.findAll('div',class_="col-11")
         dateOfTask = formatDate(dateSub[0].text)
         subject = dateSub[2].text
-        event = calendar_event.CalendarEvent(name,subject,dateOfTask)
+        event = calendarEvent.CalendarEvent(name,subject,dateOfTask)
         events.append(event)
 
     return events

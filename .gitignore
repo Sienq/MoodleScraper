@@ -1,5 +1,3 @@
-credentials.txt
-events.json
 ghostdriver.log
 __pycache__/
 users.txt
@@ -7,3 +5,5 @@ adam_credentials.txt
 hubert_credentials.txt
 hubert_events.json
 adam_events.json
+config/
+events/

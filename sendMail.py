@@ -1,10 +1,10 @@
 import smtplib
 import scrapData
-import get_credentials
+from getCredentials import getCredentials
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import datetime
-import calendar_event
+import calendarEvent
 
 
 def email(events,address):
@@ -31,6 +31,7 @@ def email(events,address):
     server.quit()
 
 def alert(event,timeleft,address):
+ 
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
     server.starttls()
@@ -47,9 +48,9 @@ def alert(event,timeleft,address):
     server.sendmail(sender, address, emailText)
 
 def checkTime(address):
-    print("siema")
+
     now = datetime.datetime.now()
-    events = calendar_event.loadEvents('events.json')
+    events = calendarEvent.loadEvents('events.json')
     for event in events:
         if event.date - now < datetime.timedelta(hours=24):
             alert(event,str(event.date-now),address)        

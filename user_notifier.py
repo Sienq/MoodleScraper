@@ -26,4 +26,6 @@ def checkNewEventsAndNotifyUser(credentials, user_file, user_email):
     calendar_event.saveEvents(current_events, user_file)
 
     new_events = calculateNewEvents(old_events, current_events)
-    email(new_events, address)
+
+    if new_events != []:
+        email(new_events, address)

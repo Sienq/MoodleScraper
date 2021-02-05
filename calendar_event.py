@@ -64,12 +64,16 @@ def loadEvents(file_name):
 
     events = []
 
-    with open(file_name, "r") as f:
+    try:
+        with open(file_name, "r") as f:
 
-        file_contents = f.read()
-        dicted_events = json.loads(file_contents)
+            file_contents = f.read()
+            dicted_events = json.loads(file_contents)
+        
+        for dicted in dicted_events:
+            events.append(CalendarEvent.initFromDict(dicted))
+        
+        return events
     
-    for dicted in dicted_events:
-        events.append(CalendarEvent.initFromDict(dicted))
-    
-    return events
+    except:
+        return []

@@ -1,7 +1,7 @@
 
 import sendMail
 import calendar_event
-import scrap
+import scrapData
 
 def calculateNewEvents(old_events, new_events):
 

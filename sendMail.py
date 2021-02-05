@@ -7,7 +7,7 @@ import datetime
 import calendarEvent
 
 
-def email(events,address):
+def newTasksEmail(events,address):
 
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
@@ -30,7 +30,7 @@ def email(events,address):
     server.sendmail(sender, address, emailText)
     server.quit()
 
-def alert(event,timeleft,address):
+def deadlineAlert(event,timeleft,address):
  
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
@@ -46,12 +46,4 @@ def alert(event,timeleft,address):
 
     emailText = msg.as_string()    
     server.sendmail(sender, address, emailText)
-
-def checkTime(address):
-
-    now = datetime.datetime.now()
-    events = calendarEvent.loadEvents('events.json')
-    for event in events:
-        if event.date - now < datetime.timedelta(hours=24):
-            alert(event,str(event.date-now),address)        
-
+    

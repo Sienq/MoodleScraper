@@ -6,11 +6,12 @@ class CalendarEvent:
 
     DATE_FORMAT = '%Y-%m-%d %H:%M'
 
-    def __init__(self, name, course, date):
+    def __init__(self, name, course, date, alert_sent=False):
 
         self.name = name
         self.course = course
         self.date = date
+        self.alert_sent = alert_sent
 
     def __repr__(self):
 
@@ -26,8 +27,9 @@ class CalendarEvent:
         name = _dict['name']
         course = _dict['course']
         date = datetime.strptime(_dict['date'], cls.DATE_FORMAT)
+        alert_sent = _dict['alert_sent']
         
-        return cls(name, course, date)
+        return cls(name, course, date, alert_sent)
     
 
     def toDict(self):
@@ -37,6 +39,7 @@ class CalendarEvent:
         _dict['name'] = self.name
         _dict['course'] = self.course
         _dict['date'] = self.date.strftime(self.DATE_FORMAT)
+        _dict['alert_sent'] = self.alert_sent
 
         return _dict
 

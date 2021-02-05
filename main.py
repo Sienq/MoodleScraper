@@ -28,7 +28,8 @@ if __name__ == "__main__":
     for user in users:
 
         credentials_file = user[0]
+        credentials = getCridentials(credentials_file)
         events_file = user[1]
         email_address = user[2]
 
-        user_notifier.checkNewEventsAndNotifyUser(credentials_file, events_file, email_address)
+        user_notifier.checkNewEventsAndNotifyUser(credentials, events_file, email_address)

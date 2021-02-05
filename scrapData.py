@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import datetime
 import calendar_event
 import calendar_source_downloader
-import get_cridentials
+import get_credentials
 
 def formatDate(mystr):
     

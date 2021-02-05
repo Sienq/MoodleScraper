@@ -24,4 +24,4 @@ def checkNewEventsAndNotifyUser(credentials, user_file, user_email):
     new_events = calculateNewEvents(old_events, current_events)
 
     if new_events != []:
-        sendMail.email(new_events, address)
+        sendMail.email(new_events, user_email)

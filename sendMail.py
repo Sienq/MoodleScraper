@@ -17,7 +17,7 @@ def email(events,address):
     msg = MIMEMultipart()
 
     msg['From'] = sender
-    msg['To'] = addr
+    msg['To'] = address
     msg['Subject'] = "NEW ASSIGNMENT"
     subject = "NEW ASSIGNMENT"
 
@@ -27,6 +27,6 @@ def email(events,address):
 
     msg.attach(MIMEText(body,'plain'))
     emailText = msg.as_string()    
-    server.sendmail(sender, addr, emailText)
+    server.sendmail(sender, address, emailText)
     server.quit()
 

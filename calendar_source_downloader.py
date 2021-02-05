@@ -6,7 +6,6 @@ from selenium.webdriver.chrome.options import Options
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--window-size=1920,1080")
-driver = webdriver.Chrome(chrome_options=chrome_options)
 
 class moodleConstants:
 
@@ -24,6 +23,9 @@ class moodleConstants:
 
 def getEventsPageSource(credentials):
 
+    driver = webdriver.Chrome(chrome_options=chrome_options)
+    driver.delete_all_cookies()
+    
     nick, password = credentials[0], credentials[1]
     driver.get(moodleConstants.LOGIN_PAGE_URL)
 

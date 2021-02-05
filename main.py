@@ -1,6 +1,6 @@
 
 import calendar_source_downloader
-from get_cridentials import getCridentials
+from get_credentials import getCredentials
 from sys import argv
 import user_notifier
 

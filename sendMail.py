@@ -30,6 +30,8 @@ def email(events,address):
     server.sendmail(sender, address, emailText)
     server.quit()
 
+    server.quit()
+
 def alert(event,timeleft,address):
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
@@ -45,7 +47,6 @@ def alert(event,timeleft,address):
 
     emailText = msg.as_string()    
     server.sendmail(sender, address, emailText)
-    server.quit()
 
 def checkTime(address):
     print("siema")

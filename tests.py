@@ -43,3 +43,9 @@ def calendarEventSerialisationTest():
             print("CALENDAR EVENT SERIALISATION TEST FAILED")
 
     print("CALENDAR EVENT SERIALISATION TEST PASSED")
+
+
+if __name__ == "__main__":
+
+    tests.calendaSourceDownladTest()
+    tests.calendarEventSerialisationTest() 

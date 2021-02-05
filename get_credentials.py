@@ -1,9 +1,9 @@
 
-def getCridentials(file_name):
+def getCredentials(file_name):
 
     with open(file_name, "r") as f:
         
-        cridentials = f.readlines()
+        credentials = f.readlines()
         nick = cridentials[0].strip()
         password = cridentials[1].strip()
 

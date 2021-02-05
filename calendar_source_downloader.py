@@ -22,9 +22,9 @@ class moodleConstants:
 
 
 
-def getEventsPageSource(cridentials):
+def getEventsPageSource(credentials):
 
-    nick, password = cridentials[0], cridentials[1]
+    nick, password = credentials[0], credentials[1]
     driver.get(moodleConstants.LOGIN_PAGE_URL)
 
     username_field = driver.find_element_by_id(moodleConstants.NICK_FIELD_ID)

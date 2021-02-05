@@ -17,7 +17,8 @@ class CalendarEvent:
         print(
             self.name,
             self.course,
-            self.date)
+            self.date
+            )
 
     @classmethod
     def initFromDict(cls, _dict):

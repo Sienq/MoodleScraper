@@ -1,3 +1,4 @@
+
 from datetime import datetime
 import json
 
@@ -11,6 +12,12 @@ class CalendarEvent:
         self.course = course
         self.date = date
 
+    def __repr__(self):
+
+        print(
+            self.name,
+            self.course,
+            self.date)
 
     @classmethod
     def initFromDict(cls, _dict):

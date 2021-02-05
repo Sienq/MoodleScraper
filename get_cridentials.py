@@ -1,3 +1,4 @@
+
 def getCridentials(file_name):
 
     with open(file_name, "r") as f:

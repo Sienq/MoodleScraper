@@ -18,7 +18,7 @@ def calculateNewEvents(old_events, new_events):
 def checkNewEventsAndNotifyUser(credentials, user_file, user_email):
 
     old_events = calendar_event.loadEvents(user_file)
-    current_events = scrap.scrap(credentials)
+    current_events = scrapData.scrap(credentials)
     calendar_event.saveEvents(current_events, user_file)
 
     new_events = calculateNewEvents(old_events, current_events)

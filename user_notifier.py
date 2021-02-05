@@ -1,5 +1,5 @@
 
-
+import sendMail
 import calendar_event
 import scrap
 
@@ -15,10 +15,6 @@ def calculateNewEvents(old_events, new_events):
     return diff
 
 
-def email(events, address):
-    pass
-
-
 def checkNewEventsAndNotifyUser(credentials, user_file, user_email):
 
     old_events = calendar_event.loadEvents(user_file)
@@ -28,4 +24,4 @@ def checkNewEventsAndNotifyUser(credentials, user_file, user_email):
     new_events = calculateNewEvents(old_events, current_events)
 
     if new_events != []:
-        email(new_events, address)
+        sendMail.email(new_events, address)

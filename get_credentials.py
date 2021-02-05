@@ -5,6 +5,6 @@ def getCredentials(file_name):
         
         credentials = f.readlines()
         nick = credentials[0].strip()
-        password = cridentials[1].strip()
+        password = credentials[1].strip()
 
         return nick, password

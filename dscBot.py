@@ -1,4 +1,5 @@
 import os
+from sys import prefix
 import discord
 from discord import message
 from dotenv import load_dotenv
@@ -9,28 +10,27 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 client = discord.Client()
 
-
 @client.event
 async def on_ready():
     print(f'{client.user} has connectedn to Discord')
 
 @client.event
-async def on_message(message):
-    channel = client.get_channel(807332645137547274)
-    if message == "on jest olkoholik":
-        await channel.send("Ja nie zaden olkoholik, ja podatki place")
-        
+async def on_message(message,userID,events):
+    user = await client.fetch_user(userID)
+    if message.author == client.user:
+        return
+    if message.content.startswith("!Tasks") and message.author == user:
+        for event in events:
+            await user.send(event.name + " " + event.course + " " + event.date)
+        await asyncio.sleep(10)
 
-async def update(events):
+async def update(events,userID):
     await client.wait_until_ready()
-    msg_sent = False
-    channel = client.get_channel(807332645137547274)
+    user = await client.fetch_user(userID)
     for event in events:
-        await channel.send("Name : " + event.name + "    " + "Course: " + event.course + "    " + "Date: " + str(event.date))
+        await user.send("Name : " + event.name + "    " + "Course: " + event.course + "    " + "Date: " + str(event.date))
     await asyncio.sleep(10)
-events = calendarEvent.loadEvents("events.json")
-client.loop.create_task(update(events))
-client.run(TOKEN)
 
-# channel = client.get_channel('807332645137547274')
-# await channel.send('hello')
+# events = [calendarEvent.CalendarEvent("pierwszy","jakis","25-02-2020"),calendarEvent.CalendarEvent("drugi","jakis","22-02-2020")]
+# client.loop.create_task(update(events,302525505783988226))
+client.run(TOKEN)

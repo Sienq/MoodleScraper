@@ -4,13 +4,23 @@ import calendarEvent
 import calendarSourceDownloader
 import getCredentials
 
+
+
+
 def formatDate(mystr):
-    
     today = datetime.datetime.today()
     splitted = mystr.split(',')
-    dayMonth = splitted[1].split(".")
-    taskDate = datetime.datetime(year = today.year, month = int(dayMonth[1]),day = int(dayMonth[0]), hour = int(splitted[2][1:3]),minute = int(splitted[2][4:6]))
-    return taskDate
+    if(splitted[0] == "Dziś"):
+        today = today.replace(hour = int(splitted[1][1:3]),minute = int(splitted[1][4:6]))
+        return today
+    elif(splitted[0] == "Jutro"):
+        tommorow = today + datetime.timedelta(days = 1)
+        tommorow= tommorow.replace(hour = int(splitted[1][1:3]),minute = int(splitted[1][4:6]))
+        return tommorow
+    else:
+        dayMonth = splitted[1].split(".")
+        taskDate = datetime.datetime(year = today.year, month = int(dayMonth[1]),day = int(dayMonth[0]), hour = int(splitted[2][1:3]),minute = int(splitted[2][4:6]))
+        return taskDate
 
 
 
@@ -35,4 +45,5 @@ def scrap(cridentials):
 
     return events
 
-
+credentials = getCredentials.getCredentials("cridentials.txt")
+scrap(credentials)

@@ -1,3 +1,4 @@
+from asyncio import events
 import os
 from sys import prefix
 import discord
@@ -15,14 +16,15 @@ async def on_ready():
     print(f'{client.user} has connectedn to Discord')
 
 @client.event
-async def on_message(message,userID,events):
-    user = await client.fetch_user(userID)
+async def on_message(message):
     if message.author == client.user:
         return
-    if message.content.startswith("!Tasks") and message.author == user:
-        for event in events:
-            await user.send(event.name + " " + event.course + " " + event.date)
-        await asyncio.sleep(10)
+    if message.content.startswith("!Tasks"): #!MESSAGE AUTHOR IN USERLIST
+        user = message.author
+        #!LOAD USER TASKS
+        # for event in events:
+        #     await user.send(event.name + " " + event.course + " " + event.date)
+        # await asyncio.sleep(10)
 
 async def update(events,userID):
     await client.wait_until_ready()

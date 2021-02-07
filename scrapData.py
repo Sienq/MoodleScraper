@@ -44,6 +44,3 @@ def scrap(cridentials):
         events.append(event)
 
     return events
-
-credentials = getCredentials.getCredentials("cridentials.txt")
-scrap(credentials)

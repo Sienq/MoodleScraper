@@ -8,7 +8,7 @@ import getCredentials
 def formatDate(mystr):
 
     today = datetime.datetime.today()
-    today.replace(second=0, microsecond=0)
+    today = today.replace(second=0, microsecond=0)
 
     splitted = mystr.split(',')
     if(splitted[0] == "Dziś"):

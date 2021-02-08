@@ -26,8 +26,11 @@ async def on_message(message):
         return
     if message.content.startswith("!Tasks"): #!MESSAGE AUTHOR IN USERLIST
         user = message.author
+        print(user)
         events = calendarEvent.loadEvents('hubert_events.json')
         #!LOAD USER TASKS
+        await user.send("Oooo CHOLLEEERRA")
+        await user.send(file = discord.File('qLjgGQ3ZCSVhT0D1veRSpFwk-2019-07-04 20_46_56.gif'))
         for event in events:
             await user.send(event.name + " " + event.course + " " + str(event.date))
         await asyncio.sleep(10)
@@ -35,6 +38,7 @@ async def on_message(message):
 async def update(events,userID):
     await client.wait_until_ready()
     user = await client.fetch_user(userID)
+    print(user)
     for event in events:
         await user.send("Name : " + event.name + "    " + "Course: " + event.course + "    " + "Date: " + str(event.date))
     await asyncio.sleep(10)

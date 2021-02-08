@@ -24,11 +24,9 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    if message.content.startswith("!Tasks"): #!MESSAGE AUTHOR IN USERLIST
+    if message.content.startswith("!Tasks"):
         user = message.author
-        print(user)
         events = calendarEvent.loadEvents('hubert_events.json')
-        #!LOAD USER TASKS
         await user.send("Oooo CHOLLEEERRA")
         await user.send(file = discord.File('qLjgGQ3ZCSVhT0D1veRSpFwk-2019-07-04 20_46_56.gif'))
         for event in events:
@@ -43,11 +41,5 @@ async def update(events,userID):
         await user.send("Name : " + event.name + "    " + "Course: " + event.course + "    " + "Date: " + str(event.date))
     await asyncio.sleep(10)
 
-# events = [calendarEvent.CalendarEvent("pierwszy","jakis","25-02-2020"),calendarEvent.CalendarEvent("drugi","jakis","22-02-2020")]
-# client.loop.create_task(update(events,302525505783988226))
-
 
 client.run(TOKEN)
-user_list_file_name = argv[1]
-users = periodicScraper.loadUserList(user_list_file_name)
-    

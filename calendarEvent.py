@@ -14,12 +14,7 @@ class CalendarEvent:
         self.alert_sent = alert_sent
 
     def __repr__(self):
-
-        print(
-            self.name,
-            self.course,
-            self.date
-            )
+        return self.name, self.course, self.date
 
     @classmethod
     def initFromDict(cls, _dict):

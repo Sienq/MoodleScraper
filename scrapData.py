@@ -5,10 +5,11 @@ import calendarSourceDownloader
 import getCredentials
 
 
-
-
 def formatDate(mystr):
+
     today = datetime.datetime.today()
+    today.replace(second=0, microsecond=0)
+
     splitted = mystr.split(',')
     if(splitted[0] == "Dziś"):
         today = today.replace(hour = int(splitted[1][1:3]),minute = int(splitted[1][4:6]))

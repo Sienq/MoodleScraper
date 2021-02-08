@@ -8,6 +8,7 @@ import calendarEvent
 import asyncio
 import periodicScraper
 from sys import argv
+from userslist import loadUserList, getUserWithID
 
 
 load_dotenv()
@@ -16,21 +17,32 @@ client = discord.Client()
 DATE_FORMAT = '%Y-%m-%d %H:%M'
 
 
+USERS_FILE = None
+
+
 @client.event
 async def on_ready():
     print(f'{client.user} has connected to Discord')
 
 @client.event
 async def on_message(message):
-    if message.author == client.user:
+
+    author = message.author
+    if author == client.user:
         return
-    if message.content.startswith("!Tasks"): #!MESSAGE AUTHOR IN USERLIST
-        user = message.author
-        events = calendarEvent.loadEvents('hubert_events.json')
-        #!LOAD USER TASKS
+    
+    user_id = author.name
+    users = loadUserList(USERS_FILE)
+    user = getUserWithID(users, user_id)
+
+    if message.content.startswith("!Tasks") and user != None:
+        
+        events = calendarEvent.loadEvents(user['events_file_name'])
         for event in events:
-            await user.send(event.name + " " + event.course + " " + str(event.date))
+            await author.send(event.name + " " + event.course + " " + str(event.date))
+       
         await asyncio.sleep(10)
+
 
 async def update(events,userID):
     await client.wait_until_ready()
@@ -39,11 +51,8 @@ async def update(events,userID):
         await user.send("Name : " + event.name + "    " + "Course: " + event.course + "    " + "Date: " + str(event.date))
     await asyncio.sleep(10)
 
-# events = [calendarEvent.CalendarEvent("pierwszy","jakis","25-02-2020"),calendarEvent.CalendarEvent("drugi","jakis","22-02-2020")]
-# client.loop.create_task(update(events,302525505783988226))
+if __name__ == "__main__":
 
+    USERS_FILE = argv[1]
+    client.run(TOKEN)
 
-client.run(TOKEN)
-user_list_file_name = argv[1]
-users = periodicScraper.loadUserList(user_list_file_name)
-    

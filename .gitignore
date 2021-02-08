@@ -8,3 +8,4 @@ adam_events.json
 config/
 events/
 single_scraper_lock
+.env

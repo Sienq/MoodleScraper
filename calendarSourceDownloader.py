@@ -44,14 +44,14 @@ def getEventsPageSource(credentials):
         proceed_button = driver.find_element_by_name(moodleConstants.PROCEED_BUTTON_NAME)
         proceed_button.click()
 
-    except NoSuchElementException:
+    except:
         pass
     
     try:
         cookie_close = driver.find_element_by_class_name("close-cookie-panel")
         cookie_close.click()
     
-    except NoSuchElementException:
+    except:
         pass
 
     calendar_link = driver.find_element_by_xpath('//a[@href="'+moodleConstants.CALENDAR_LINK_URL+'"]')

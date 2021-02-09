@@ -26,7 +26,7 @@ def getUserWithID(list_, user_id):
 
     for u in list_:
         
-        if u['discord_id'] == user_id:
+        if u['discord_id'] == str(user_id):
             return u
     
     return None

@@ -21,6 +21,6 @@ if __name__ == "__main__":
     users = userslist.loadUserList(user_list_file_name)
 
     for user in users:
-        userNotifier.checkNewEventsAndNotifyUser(user['credentials'], user['events_file_name'], user['email_address'])
+        userNotifier.checkNewEventsAndNotifyUser(user['credentials'], user['events_file_name'], user['email_address'], user['discord_id'])
     
     removeLock(LOCK_FILE_NAME) # lock will not be removed if scraping fails to prevent next launch

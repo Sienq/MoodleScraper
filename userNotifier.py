@@ -3,6 +3,10 @@ import sendMail
 import calendarEvent
 import scrapData
 import datetime
+import dscBot
+import time
+import asyncio
+
 
 DEADLINE_INTERVAL = datetime.timedelta(hours=60)
 
@@ -29,7 +33,10 @@ def getIntervalIfClose(event):
     return None
 
 
-def checkNewEventsAndNotifyUser(credentials, user_file, user_email):
+# async def awaitUpdate(new_events, user_id):
+#     await dscBot.update(new_events, user_id)
+
+def checkNewEventsAndNotifyUser(credentials, user_file, user_email, user_id):
 
     old_events = calendarEvent.loadEvents(user_file) # saved ones
     current_events = scrapData.scrap(credentials) # one line ones
@@ -37,7 +44,10 @@ def checkNewEventsAndNotifyUser(credentials, user_file, user_email):
     # notify about new events
     new_events = calculateNewEvents(old_events, current_events)
     if new_events != []:
+
         sendMail.newTasksEmail(new_events, user_email)
+        # dscBot.client.loop.run(awaitUpdate(new_events, user_id))
+        
 
     updated_events = old_events + new_events # to save
 
